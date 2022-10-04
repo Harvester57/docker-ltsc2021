@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-2019
+    runs-on: windows-2022
     steps:
       -
         name: Login to DockerHub
@@ -21,5 +21,5 @@ jobs:
         name: Build the Docker image
         run: |
           docker build . --file Dockerfile --tag ${{ secrets.DOCKERHUB_USERNAME }}/windows-ltsc2016-vs2019:latest
-          docker push ${{ secrets.DOCKERHUB_USERNAME }}/windows-ltsc2016-vs2019:latest
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/ltsc2022:latest
           docker logout
