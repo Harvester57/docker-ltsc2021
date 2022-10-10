@@ -3,8 +3,8 @@
 # Licensed under the MIT License.
 
 ARG dockerHost=mcr.microsoft.com
-ARG WindowsServerCoreRepo=windows/servercore
-ARG tag=ltsc2022-KB5017316
+ARG WindowsServerCoreRepo=windows
+ARG tag=20H2-KB5016616
 
 # Use server core as an installer container to extract PowerShell,
 # As this is a multi-stage build, this stage will eventually be thrown away
