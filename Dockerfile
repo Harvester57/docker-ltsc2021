@@ -8,7 +8,7 @@ ARG tag=20H2-KB5016616
 
 # Use server core as an installer container to extract PowerShell,
 # As this is a multi-stage build, this stage will eventually be thrown away
-FROM mcr.microsoft.com/${WindowsServerCoreRepo}:${tag} AS installer-env
+FROM ${dockerHost}/${WindowsServerCoreRepo}:${tag} AS installer-env
 
 ARG PS_VERSION=7.2.6
 ARG PS_PACKAGE_URL=https://github.com/PowerShell/PowerShell/releases/download/v${PS_VERSION}/PowerShell-${PS_VERSION}-win-x64.zip
@@ -35,7 +35,7 @@ RUN Write-host "Verifying valid Version..."; `
     Expand-Archive powershell.zip -DestinationPath  \PowerShell
 
 # Install PowerShell into WindowsServerCore
-FROM mcr.microsoft.com/${WindowsServerCoreRepo}:${tag}
+FROM ${dockerHost}/${WindowsServerCoreRepo}:${tag}
 
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "2022-10-10"
