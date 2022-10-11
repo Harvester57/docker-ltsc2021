@@ -1,8 +1,8 @@
-# Cf. https://hub.docker.com/_/microsoft-windows-nanoserver
-FROM mcr.microsoft.com/windows:20H2-KB5016616
+# Cf. https://hub.docker.com/_/microsoft-windows
+FROM mcr.microsoft.com/windows:1809-KB5018419-amd64
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "2022-10-10"
+LABEL lastupdate "2022-10-11"
 LABEL author "Florian Stosse"
-LABEL description "Windows 10 20H2-KB5016616 image"
+LABEL description "Windows 10 1809-KB5018419-amd64 image"
 LABEL license "MIT license"
