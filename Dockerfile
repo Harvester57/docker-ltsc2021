@@ -1,5 +1,5 @@
 # Cf. https://hub.docker.com/_/microsoft-windows
-FROM mcr.microsoft.com/windows:1809-KB5018419-amd64
+FROM mcr.microsoft.com/windows:2009-KB4579311-amd64
 
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "2022-10-11"
